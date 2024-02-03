@@ -1,7 +1,6 @@
 import { useToast } from "@/components/ui/use-toast";
-import Loader from "@/components/shared/loader";
-import UserCard from "@/components/shared/UserCard";
-import { useGetUsers } from "@/lib/react-query/queriesAndMutations";
+import { Loader, UserCard } from "@/components/shared";
+import { useGetUsers } from "@/lib/react-query/queries";
 
 const AllUsers = () => {
   const { toast } = useToast();
@@ -10,7 +9,7 @@ const AllUsers = () => {
 
   if (isErrorCreators) {
     toast({ title: "Something went wrong." });
-
+    
     return;
   }
 

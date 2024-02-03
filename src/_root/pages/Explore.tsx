@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-import { Input } from "@/components/ui/input";
-import GridPostList from "@/components/shared/GridPostList";
-import Loader from "@/components/shared/loader";
-import { useGetPosts, useSearchPosts } from "@/lib/react-query/queriesAndMutations";
+import { Input } from "@/components/ui";
 import useDebounce from "@/hooks/useDebounce";
+import { GridPostList, Loader } from "@/components/shared";
+import { useGetPosts, useSearchPosts } from "@/lib/react-query/queries";
 
 export type SearchResultProps = {
   isSearchFetching: boolean;
@@ -51,7 +50,7 @@ const Explore = () => {
 
   return (
     <div className="explore-container">
-      <div className="explore-inner-container">
+      <div className="explore-inner_container">
         <h2 className="h3-bold md:h2-bold w-full">Search Posts</h2>
         <div className="flex gap-1 px-4 w-full rounded-lg bg-dark-4">
           <img
